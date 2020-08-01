@@ -1,0 +1,54 @@
+int led = 13;
+int dit = 50;
+int dah = 150;
+int LongW = 1000; 
+
+
+void setup() {
+  // put your setup code here, to run once:
+pinMode(13, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+digitalWrite(led , HIGH);
+delay(dit);
+digitalWrite(led , LOW);
+delay(dit);
+digitalWrite(led , HIGH);
+delay(dit);
+digitalWrite(led , LOW);
+delay(dit);
+digitalWrite(led , HIGH);
+delay(dit);
+digitalWrite(led , LOW);
+delay(dit);
+
+digitalWrite(led , HIGH);
+delay(dah);
+digitalWrite(led , LOW);
+delay(dah);
+digitalWrite(led , HIGH);
+delay(dah);
+digitalWrite(led , LOW);
+delay(dah);
+digitalWrite(led , HIGH);
+delay(dah);
+digitalWrite(led , LOW);
+delay(dah);
+
+digitalWrite(led , HIGH);
+delay(dit);
+digitalWrite(led , LOW);
+delay(dit);
+digitalWrite(led , HIGH);
+delay(dit);
+digitalWrite(led , LOW);
+delay(dit);
+digitalWrite(led , HIGH);
+delay(dit);
+digitalWrite(led , LOW);
+delay(dit);
+
+delay(LongW);
+}
