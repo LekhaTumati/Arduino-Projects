@@ -1,0 +1,29 @@
+int i;
+int myPin = 12;
+int myNumber;
+int t= 200;
+String msg = "Please enter the number of times you wanna blink the LED: ";
+
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin(9600);
+pinMode(myPin, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+Serial.println(msg);
+while(Serial.available() == 0)
+{
+  
+}
+myNumber = Serial.parseInt();
+Serial.println(myNumber);
+for(i = 1; i <= myNumber; i++)
+{
+  digitalWrite(myPin, HIGH);
+  delay(t);
+  digitalWrite(myPin, LOW);
+  delay(t);
+}
+}
