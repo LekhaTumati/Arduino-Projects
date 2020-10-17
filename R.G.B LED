@@ -1,0 +1,51 @@
+int redPin = 8;
+int greenPin = 9;
+int bluePin = 10;
+String msg = "What colour? ";
+String myColour;
+
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin(9600);
+pinMode(redPin, OUTPUT);
+pinMode(greenPin, OUTPUT);
+pinMode(bluePin, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+Serial.println(msg);
+while(Serial.available() == 0)
+{
+  
+}
+myColour = Serial.readString();
+if(myColour == "red")
+{
+  digitalWrite(redPin, HIGH);
+  digitalWrite(greenPin, LOW);
+  digitalWrite(bluePin, LOW);
+}
+
+if(myColour == "green")
+{
+  digitalWrite(greenPin, HIGH);
+  digitalWrite(redPin, LOW);
+  digitalWrite(bluePin, LOW);
+}
+
+if(myColour == "blue")
+{
+  digitalWrite(bluePin, HIGH);
+  digitalWrite(greenPin, LOW);
+  digitalWrite(redPin, LOW);
+}
+
+if(myColour == "off")
+{
+  digitalWrite(redPin, LOW);
+  digitalWrite(greenPin, LOW);
+  digitalWrite(bluePin, LOW);
+}
+
+}
